@@ -6,18 +6,19 @@ export default function Navbar(){
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white/80 backdrop-blur-md border-b border-cream-200 sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4">
+    <header className="bg-white/90 backdrop-blur-xl border-b border-cream-200 sticky top-0 z-50 shadow-sm">
+      <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-4 group">
-            <div className="w-12 h-12 bg-gradient-to-br from-coffee-500 to-coffee-700 rounded-2xl flex items-center justify-center text-white font-bold text-lg shadow-medium group-hover:shadow-large transition-all duration-300 group-hover:scale-105">
+            <div className="w-12 h-12 bg-gradient-to-br from-coffee-500 to-coffee-700 rounded-2xl flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105 group-hover:rotate-3">
               ☕
             </div>
             <div>
-              <div className="font-bold text-xl text-latte-900 group-hover:text-coffee-600 transition-colors duration-200">
+              <div className="font-bold text-xl text-latte-900 group-hover:text-coffee-600 transition-all duration-300 transform group-hover:translate-x-1">
                 Full Stacks Coffee
               </div>
-              <div className="text-sm text-latte-600 font-medium">
+              <div className="text-sm text-latte-600 font-medium flex items-center">
+                <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
                 Fresh roasted • Fast service
               </div>
             </div>

@@ -3,31 +3,34 @@ import { Link } from 'react-router-dom'
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-coffee-50 via-cream-100 to-coffee-100 p-8 md:p-12 mb-12 shadow-large">
+    <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-coffee-50 via-cream-100 to-coffee-100 p-8 md:p-12 mb-12 shadow-xl">
       {/* Enhanced Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-coffee-300 rounded-full -translate-y-32 translate-x-32 animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-cream-400 rounded-full translate-y-24 -translate-x-24 animate-bounce-gentle"></div>
-        <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-coffee-200 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute top-0 right-0 w-72 h-72 bg-coffee-300 rounded-full -translate-y-32 translate-x-32 animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-56 h-56 bg-cream-400 rounded-full translate-y-24 -translate-x-24 animate-bounce-gentle"></div>
+        <div className="absolute top-1/2 left-1/4 w-40 h-40 bg-coffee-200 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-coffee-400 rounded-full animate-bounce-gentle delay-700"></div>
       </div>
       
       <div className="relative z-10 md:flex md:items-center md:justify-between">
         <div className="max-w-2xl">
-          <div className="inline-flex items-center px-4 py-2 bg-coffee-100/50 rounded-full text-coffee-700 text-sm font-medium mb-6 backdrop-blur-sm">
-            <span className="w-2 h-2 bg-coffee-500 rounded-full mr-2 animate-pulse"></span>
-            Now serving fresh roasted coffee
+          <div className="inline-flex items-center px-4 py-2 bg-coffee-100/60 rounded-full text-coffee-700 text-sm font-medium mb-6 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+            <span className="w-2 h-2 bg-coffee-500 rounded-full mr-2 animate-ping"></span>
+            <span className="text-coffee-800 font-semibold">Now Brewing Fresh Coffee</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold text-latte-900 leading-tight mb-6">
-            Welcome to{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-coffee-600 via-coffee-700 to-coffee-800">
-              Full Stacks Coffee
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-latte-900 leading-tight mb-6">
+            Experience{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-coffee-600 via-coffee-700 to-coffee-800 animate-gradient">
+              Artisanal Coffee
             </span>
+            <br />
+            <span className="text-3xl md:text-5xl lg:text-6xl text-coffee-800 opacity-90">Every Single Day</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-latte-700 mb-8 leading-relaxed">
-            Handcrafted coffee, locally roasted beans, and a cozy workspace. 
-            Order online or pickup in-store for the perfect brew experience.
+          <p className="text-lg md:text-xl text-latte-700 mb-8 leading-relaxed max-w-xl">
+            <span className="font-semibold text-coffee-800">Handcrafted perfection in every cup.</span> Locally roasted beans, 
+            cozy workspace, and lightning-fast service. Order online or visit us for the ultimate brew experience.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mb-8">

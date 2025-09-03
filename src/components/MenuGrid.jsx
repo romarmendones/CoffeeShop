@@ -52,19 +52,26 @@ export default function MenuGrid({ selectedCategory = null }) {
   if (loading) {
     return (
       <div className="space-y-8">
-        <div className="text-center">
-          <div className="w-12 h-12 mx-auto mb-4 border-b-2 rounded-full animate-spin border-coffee-600"></div>
-          <div className="text-latte-600">Loading delicious menu items...</div>
+        <div className="p-6 border shadow-sm bg-white/80 backdrop-blur-md rounded-2xl border-cream-200/50">
+          <div className="max-w-md mx-auto text-center">
+            <div className="relative w-16 h-16 mx-auto mb-6">
+              <div className="absolute inset-0 border-t-2 border-r-2 rounded-full border-coffee-400 animate-spin"></div>
+              <div className="absolute border-t-2 border-l-2 rounded-full inset-3 border-coffee-600 animate-spin-reverse"></div>
+              <div className="absolute text-2xl inset-6 animate-bounce">☕</div>
+            </div>
+            <div className="mb-2 text-lg font-medium text-coffee-800">Brewing your menu...</div>
+            <div className="text-latte-600">We're preparing a delightful selection of coffee and treats</div>
+          </div>
         </div>
         
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
           {[...Array(6)].map((_, i) => (
-            <div key={i} className="p-6 card animate-pulse">
-              <div className="h-48 mb-4 bg-latte-200 rounded-xl"></div>
+            <div key={i} className="p-6 border shadow-sm bg-white/80 backdrop-blur-md rounded-2xl border-cream-200/50 animate-pulse">
+              <div className="h-48 mb-4 bg-gradient-to-br from-latte-100 to-latte-200 rounded-xl"></div>
               <div className="space-y-3">
-                <div className="h-6 rounded bg-latte-200"></div>
-                <div className="w-3/4 h-4 rounded bg-latte-200"></div>
-                <div className="w-1/2 h-4 rounded bg-latte-200"></div>
+                <div className="h-6 rounded-lg bg-gradient-to-r from-latte-200 to-latte-100"></div>
+                <div className="w-3/4 h-4 rounded-lg bg-gradient-to-r from-latte-100 to-latte-200"></div>
+                <div className="w-1/2 h-4 rounded-lg bg-gradient-to-r from-latte-200 to-latte-100"></div>
               </div>
             </div>
           ))}
@@ -86,19 +93,19 @@ export default function MenuGrid({ selectedCategory = null }) {
   return (
     <div className="space-y-8">
       {/* Search and Filter Bar */}
-      <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-        <div className="relative flex-1 max-w-md">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-            <svg className="w-5 h-5 text-latte-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="flex flex-col items-center justify-between gap-4 p-4 border shadow-sm sm:flex-row bg-white/80 backdrop-blur-md rounded-2xl border-cream-200/50">
+        <div className="relative flex-1 max-w-md group">
+          <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
+            <svg className="w-5 h-5 transition-colors duration-200 text-coffee-400 group-focus-within:text-coffee-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
           </div>
           <input
             type="text"
-            placeholder="Search menu items..."
+            placeholder="Search our delicious menu..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 input-field"
+            className="w-full pl-12 pr-4 py-2.5 rounded-xl border border-cream-200 bg-white/50 focus:bg-white text-latte-900 placeholder-latte-400 focus:placeholder-latte-500 outline-none focus:ring-2 focus:ring-coffee-200 focus:border-coffee-400 transition-all duration-200"
           />
         </div>
         
